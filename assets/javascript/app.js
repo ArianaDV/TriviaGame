@@ -3,23 +3,27 @@ $(document).ready(function() {
 
 var correct = 0;
 var incorrect = 0;
+var unanswered = 0;
+
 
 var time = 30;
+var intervalId;
 
 
-
+//start game
 $("#start").on("click", function() {
 
+	//call timer function
 	run ();
 
 	$("form").show() ;
 	$("#start").hide();
-
-	//call timer function
 	
 	
 });
 
+
+//Set timer to decrease each second
 function run() {
 
 	intervalID = setInterval(timer, 1000) ;
@@ -29,14 +33,59 @@ function timer () {
 
 	time --;
 
-$("#timer").text("Time Remaining:" + " "+ time);	
+$("#timer").text("Time Remaining:" + " "+ time);
+
+
+	if (time === 0) {
+
+	game();
+
+	$("#correct").append(correct);
+
+	$("#incorrect").append(incorrect);
+	
+	$("#unanswered").append(unanswered);
+
+
+	$("form").hide();
+
+	$("#score").show();	
+
+	}
 }
 
+function stopTimer() {
+
+	time = 0;
+
+}
 
 
 
 $("#something").on("click", function() {
 
+	game();
+
+	stopTimer();
+	
+	$("#correct").append(correct);
+
+	$("#incorrect").append(incorrect);
+
+	$("#unanswered").append(unanswered);
+
+
+	$("form").hide();
+
+	$("#score").show();
+
+
+});
+
+
+function game () {
+
+	
 	q1val = ($("input:radio[name=Question1]:checked", "form" ).val()) ;
 
 	q2val = ($("input:radio[name=Question2]:checked", "form" ).val()) ;
@@ -52,11 +101,17 @@ $("#something").on("click", function() {
 
 
 
+
+
 	if (q1val === "Wendy's") {
 
 		correct ++;
 				
-		} else {
+		} else if (q1val == null) {
+
+			unanswered++
+
+		}else {
 
 		incorrect ++;
 
@@ -67,6 +122,10 @@ $("#something").on("click", function() {
 
 		correct ++;
 				
+		} else if (q2val == null) {
+
+			unanswered++
+
 		} else {
 
 		incorrect ++;
@@ -77,6 +136,10 @@ $("#something").on("click", function() {
 
 		correct ++;
 				
+		} else if (q3val == null) {
+
+			unanswered++
+
 		} else {
 
 			incorrect ++;
@@ -87,6 +150,10 @@ $("#something").on("click", function() {
 
 		correct ++;
 				
+		} else if (q4val == null) {
+
+			unanswered++
+
 		} else {
 
 			incorrect ++;
@@ -97,6 +164,10 @@ $("#something").on("click", function() {
 
 		correct ++;
 				
+		} else if (q5val == null) {
+
+			unanswered++
+
 		} else {
 
 			incorrect ++;
@@ -107,28 +178,16 @@ $("#something").on("click", function() {
 
 		correct ++;
 				
+		} else if (q6val == null) {
+
+			unanswered++
+
 		} else {
 
 			incorrect ++;
 
 		}
-	
-	$("#correct").append(correct);
-
-	$("#incorrect").append(incorrect);
-
-
-	$("form").hide();
-
-	//display score
-
-	$("#score").show();
-
-
-});
-
-
-//timer
+}
 
 
 
