@@ -4,18 +4,34 @@ $(document).ready(function() {
 var correct = 0;
 var incorrect = 0;
 
+var time = 30;
 
 
 
 $("#start").on("click", function() {
 
+	run ();
+
 	$("form").show() ;
 	$("#start").hide();
 
 	//call timer function
-	setTimeout(timer, 1000 * 30);
+	
 	
 });
+
+function run() {
+
+	intervalID = setInterval(timer, 1000) ;
+}
+
+function timer () {
+
+	time --;
+
+$("#timer").text("Time Remaining:" + " "+ time);	
+}
+
 
 
 
@@ -116,11 +132,6 @@ $("#something").on("click", function() {
 
 
 
-
-function timer () {
-
-	alert ("Time's Up!")
-}
 
 
 
