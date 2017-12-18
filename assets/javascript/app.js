@@ -13,6 +13,7 @@ $("#start").on("click", function() {
 	$("#start").hide();
 
 	//call timer function
+	setTimeout(timer, 1000 * 30);
 	
 });
 
@@ -111,11 +112,15 @@ $("#something").on("click", function() {
 });
 
 
+//timer
 
 
 
 
+function timer () {
 
+	alert ("Time's Up!")
+}
 
 
 
