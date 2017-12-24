@@ -111,4 +111,31 @@ p {
 #something {
 
 	position: relative;
+
+	top: 20px;
+
+	width: 10% ;
+
+	height: 25px;
+
+	background-color: black;
+
+	color: #ffffff;
+
+	font-size: 15px;
+
+	font-weight: bolder;
+}
+
+#score {
+
+	font-weight: bold;
+
+	font-size: 30px;
+
+	text-align: center;
+
+	position: relative;
+
+	top: 40%;
 }
