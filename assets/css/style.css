@@ -1,11 +1,114 @@
-body {
 
-	background: plum;
+body, html {
 
+	height: 100% ;
+
+	width: 100%;
+
+	margin: 0px;
+
+	}
+
+h1 {
+	color: #800000;
+	font-weight: bolder;
+
+	font-size: 80px;
+	text-align: center;
+	margin:0px;
+
+	position: relative;
+
+	top: 150px;
+}
+
+#timer {
+
+	margin: 0px;
+
+	margin-left: 10px;
+
+	font-weight: bolder;
+
+	color: #800000;
+	
+}
+
+#score {
+
+	margin: 0px;
+}
+
+
+form {
+	
+	height: 100%;
+
+	margin-right: 0px;
+
+	margin-left: 30px;
+
+	padding-top: 10px;
+
+	font-size: 20px;
+}
+
+#background {
+
+	background-image: url(../images/background.jpg) ; 
+
+	height: 100%;
+
+	width: 100%;
+
+	margin: 0px;
+
+	padding: 0px;
+		
+	opacity: 0.2;
+
+	position: absolute;
+	
+	
+	
 }
 
 p {
 
 	font-weight: bold;
+
+	font-size: 23px;
+
+	margin: 0px;
+
+	margin-top: 40px;
 	
+}
+
+#start {
+
+	width: 20% ;
+
+	height: 50px;
+
+	background-color: black;
+
+	color: #ffffff;
+
+	font-size: 25px;
+
+	font-weight: bolder;
+
+	position: relative;
+
+	left: 40%;
+
+	top: 180px;
+
+	margin: 0px;
+}
+
+#something {
+
+	position: relative;
 }

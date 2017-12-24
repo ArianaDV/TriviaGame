@@ -18,6 +18,7 @@ $("#start").on("click", function() {
 
 	$("form").show() ;
 	$("#start").hide();
+	$("h1").hide();
 	
 	
 });
