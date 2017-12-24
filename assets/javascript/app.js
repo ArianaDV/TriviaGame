@@ -99,10 +99,7 @@ function game () {
 
 	q6val = ($("input:radio[name=Question6]:checked", "form" ).val()) ;
 
-
-
-
-
+	
 
 	if (q1val === "Wendy's") {
 
@@ -188,6 +185,8 @@ function game () {
 			incorrect ++;
 
 		}
+
+	
 }
 
 
